@@ -1,0 +1,407 @@
+.App {
+  text-align: center;
+}
+.goal-plan {
+  display: flex;
+  flex-direction: column;
+}
+.goal-plan-item-container {
+  display: flex;
+  flex-direction: row;
+  font-size: calc(14px );
+  color: rgb(77, 77, 77);
+  padding-left: 10px;
+}
+.goal-plan-item {
+  display: flex;
+  flex-direction: row;
+  padding-left: 4px;
+}
+.goal-plan-index{
+  display: flex;
+  flex-direction: row;
+ 
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  body {
+    height: 100vh !important;
+    overflow: hidden;
+  }}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.badge {
+  margin-left: -10px;
+  color:red;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.aiVoice {
+  position:fixed;
+  bottom:65px;
+  right:20px;
+  display: none;
+}
+.SubmitButton {
+  position:fixed;
+  bottom:30px;
+  right:16px;
+}
+.goalFieldGoal{
+  font-size: x-small;
+  text-align: left;
+  font-weight: bold;
+  text-align: left;
+}
+
+.goalFieldTime{
+  font-size: x-small;
+  text-align: left;
+  font-weight: bold;
+  text-align: left;
+}
+.goalButton{
+  width:50px;
+  height:20px;
+  color:#93a4a0;
+  border-radius: 10px;
+  background-color: #40414f;
+  text-align:center;
+  padding:12px;
+  margin-left: auto;
+  margin-right:auto;
+  visibility: hidden;
+}
+.goalButtons{
+  display:flex;
+  vertical-align: middle;
+}
+
+.goalAssess{
+  
+  border-radius: 10px;
+  bottom:0px;
+  display:flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height:95%;
+ }
+
+ .goalInfo{
+  display:flex;
+  background-color: rgb(236, 236, 236);
+  color:#5a5a5a;
+  border: none;
+  padding:5px;
+ }
+ 
+ .goal-subgoal{
+  height:10%;
+  color:#171717;
+  padding:3px;
+  text-align: left;
+  font-size: normal;
+ }
+
+ .goalName{
+  height:20%;
+  color:#171717;
+  border-radius: 10px;
+  border: none;
+  padding:5px;
+  text-align: left;
+  font-size: large;
+  font-variant-caps: normal;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ .goalInfo.good{
+  background-color:#89cfbf41;
+ }
+ .goalInfo.bad{
+  background-color:#a080803f;
+ }
+ .goalTimeframe{
+  color:#93a4a0;
+  border-radius: 10px;
+  border: none;
+  padding:10px;
+  font-size: x-small;
+ }
+ .goalSet{
+  color:#93a4a0;
+  border-radius: 10px;
+  border: 1px white solid;
+  padding:10px;
+  height:20px;
+ }
+ .goal-date{
+  font-size: small;
+  padding:5px;
+  font-weight: bold;
+  color:#323232;
+ }
+ .goalSet:hover{
+  background-color: #0ca37f;
+  color:#40414f;
+  border-radius: 10px;
+  border: 1px white solid;
+  padding:10px;
+ }
+
+.side-menu-button:hover {
+  background-color: rgb(255,255,255,0.1);
+  transition: ease 0.25s all;
+}
+
+.chat-input-holder{
+  padding:4px;
+  padding-right: 25px;
+  position:fixed;
+  bottom:5px;
+  left:0;
+  Right:0;
+  width:100%; 
+  flex: 0 1 auto;
+}
+.chat-input-textarea{
+  width:calc(100% - 35px) ;
+  border-radius: 5px;
+  background-color: #ececec;
+  color:rgb(48, 48, 48);
+  border:none;
+  font-size: 1.25m;
+  margin:7px;
+  padding:12px;
+  outline: none;
+  box-shadow: 0,0,8px,4px,rgba(0,0,0,0.5);
+}
+.chat-message.goalBot{
+  padding:7px;
+}
+.chat-message{
+  padding:7px;
+}
+.chat-message-center{
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: calc(100vh - 172px); 
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+.chat-log{
+    display:flex;
+    flex-grow: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    text-align: left;
+}
+.chat-row.USER{
+   display: flex;
+   padding:6px;  
+}
+.chat-row{
+   display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    height:100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.chat-card{
+   border-radius: 10px;
+   border: 1px solid #ededed;
+}
+
+.chat-message-text{
+  display: flex;
+  white-space: pre-wrap;
+  padding-left:  9px; 
+  padding-right:  9px; 
+  padding-top: 3px;
+  padding-bottom: 3px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+.chat-card.goalBot{
+  background-color: #ececec;
+  color:rgb(48,48,48);
+}
+
+.chat-message-sender{
+  min-width:20px;
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  text-align: center;
+  color:rgb(124,124,124);
+  margin-top: 10px;
+  background-color:rgb(125, 124, 124);
+}
+.chat-message-username{
+  font-size: small;
+  padding-left: 5px;
+  font-weight: 300;
+  display: none;
+}
+.chat-message-sender.USER{
+  min-width:20px;
+  width: 20px;
+  height:20px;
+  border-radius: 50%;
+  background-color:#838383;
+  text-align: center;
+  color:#0b896c7e;
+  margin-top: 10px;
+}
+.chat-message-sender.goalBot{    
+    background-color:#0ca37f;
+    color:#0b896c7e;
+ }
+ .chat-message-sender.goalBot.loading{    
+  
+  animation: pulse 1s ease-out infinite;
+}
+
+ .chat-message-sender.studentBot{ 
+  background-color:#78a30c;
+  color:#0505057e;
+}
+ 
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.chatbox {
+  flex:1;
+  border: none ;
+  position:relative;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-indicator {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.goal-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.goal-quote {
+  font-size: 13px;
+  color:rgb(128, 126, 126);
+  margin:2px;
+}
+.goal-chart {
+  min-height: 50px;
+  background-color: #0ca37f;
+  width: 100%;
+}
+.goal-card {
+  width: 90%;
+  min-height: 200px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.goal-card:hover {
+  
+  background-color: #eaeaea;
+}
+
+.goal-card.clicked {
+  background-color: green;
+}
+
+.goal-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.goal-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+:root {
+  --bs-primary: #ff0000;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgba(0,0,0,0.1);
+  }
+  50% {
+    background-color: rgba(0,0,0,0.3);
+  }
+  100% {
+    background-color: rgba(0,0,0,0.1);
+  }
+}

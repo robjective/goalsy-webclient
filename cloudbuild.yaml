@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us-west2-docker.pkg.dev/ai-coaching-373921/REPOSITORY/IMAGE_NAME', '.' ]

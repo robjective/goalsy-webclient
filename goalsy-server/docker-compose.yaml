@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  server:
+    build: ./
+    environment:
+      - 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
+    container_name: server_goals
+    platform: linux/amd64
+    ports:
+      - 3080:3080
+  client:
+    build: ./../
+    container_name: client_goals
+    platform: linux/amd64
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+  
+  #docker push goalsteam/ai_goals:tagname
