@@ -1,0 +1,22 @@
+## Allow Docker Perms
+
+gcloud auth configure-docker us-west2-docker.pkg.dev
+## get the latest
+docker-compose up --force-recreate
+
+## Tag it for Gcloud 
+
+
+docker tag goalsy-server-server \us-west2-docker.pkg.dev/ai-coaching-373921/aicoaching/server:goalsyGtab
+docker push us-west2-docker.pkg.dev/ai-coaching-373921/aicoaching/server:goalsyGtab
+
+docker tag goalsy-server-client \us-west2-docker.pkg.dev/ai-coaching-373921/aicoaching/client:goalsyGtab 
+docker push us-west2-docker.pkg.dev/ai-coaching-373921/aicoaching/client:goalsyGtab
+
+
+## To deploy updates to the codebase:
+docker-compose up -d --build
+
+## Start Docker 
+
+sudo launchctl start com.docker.docker 
